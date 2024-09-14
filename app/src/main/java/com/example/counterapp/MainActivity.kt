@@ -16,8 +16,11 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 
@@ -55,20 +58,28 @@ fun CounterApp(viewModel: CounterViewModel){
     val counter = viewModel.count
     
     //Compose UI Layout
-    Column {
-        Text(text = "Counter: $counter", style = MaterialTheme.typography.headlineMedium)
+    Column (modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally){
+        Text(text = "Counter: $counter",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            style = MaterialTheme.typography.headlineMedium)
         
-        Spacer(modifier = Modifier.height(16.dp))
         
-        //Button to Increment the Counter
-        Button(onClick = { viewModel.increment() }) {
-            Text(text = "Increment Counter")
+        Row {
+            //Button to Increment the Counter
+            Button(onClick = { viewModel.increment() }) {
+                Text(text = "Increment")
+            }
+            
+            Spacer(modifier = Modifier.width(5.dp))
+            //Button to Decrement the Counter
+            Button(onClick = { viewModel.decrement() }) {
+                Text(text = "Decrement")
+            }
         }
-
-        //Button to Decrement the Counter
-        Button(onClick = { viewModel.decrement() }) {
-            Text(text = "Decrement Counter")
-        }
+        
         
     }
 }
