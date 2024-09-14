@@ -7,7 +7,6 @@ Mobile No: +91- 6204086738
 
 package com.example.counterapp
 
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
@@ -20,7 +19,7 @@ class CounterViewModel : ViewModel() {
     //Create a public immutable state variable count that reflects the value of _count.
     //Ensure it's a MutableState type but exposed as an immutable state
 
-    val count = _count.value
+    val count : Int  get() = _count.value
 
     //Define two functions increment() and decrement() that modify _count.
    // These will be used to change the counter value.

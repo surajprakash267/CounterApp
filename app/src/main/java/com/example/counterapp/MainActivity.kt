@@ -19,8 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.lifecycle.ViewModel
-import androidx.compose.runtime.getValue
+
 
 //Import necessary libraries and set up your main activity to
 // inherit from ComponentActivity.
@@ -40,7 +39,7 @@ class MainActivity : ComponentActivity() {
 
             // Pass the ViewModel to the Composable
 
-            CounterApp(viewModel = counterViewModel)
+            CounterApp(counterViewModel)
         }
     }
 }
