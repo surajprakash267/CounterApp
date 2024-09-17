@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() { //Mainactivity is Inheriting from Com
 fun CounterApp(viewModel: CounterViewModel){
     
     // Get the current counter value from the ViewModel
-    val counter = viewModel.count
+    val counter = viewModel.count.value
     
     //Compose UI Layout
     Column (modifier = Modifier.fillMaxSize(),
