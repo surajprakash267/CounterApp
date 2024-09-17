@@ -30,7 +30,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 // CounterViewModel instance.
 //Use the viewModel() function to initialize CounterViewModel.
 
-class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity() { //Mainactivity is Inheriting from ComponentActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
