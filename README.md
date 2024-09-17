@@ -1,14 +1,6 @@
 **Counter App**
 
-
-
-![Screenshot_20240915_015725](https://github.com/user-attachments/assets/6541bdec-8408-4d38-a7aa-5e4716253fc4)
-
-
-
-
-
-
+![update1](https://github.com/user-attachments/assets/2fda3bee-6ae5-4385-bc6e-dbfbe15fc551)
 
 
 Description:
